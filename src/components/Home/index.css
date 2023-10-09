@@ -1,0 +1,134 @@
+.app-home {
+  background-color: #000000;
+  min-height: 100vh;
+  background-size: cover;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.home-heading {
+  color: #ffffff;
+  font-size: 64px;
+  width: 60%;
+}
+.home-page-description {
+  color: #ffffff;
+  font-size: 20px;
+  width: 60%;
+}
+.find-jobs-btn {
+  background-color: #6366f1;
+  color: #ffffff;
+  height: 45px;
+  width: 120px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+}
+.home-heading {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+}
+.search-container {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  width: 400px;
+  height: 45px;
+}
+.app-jobs {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+}
+
+.search-input {
+  background-color: transparent;
+  width: 100%;
+  padding: 7px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+}
+.search-button {
+  background-color: #272727;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  width: 50px;
+}
+.jobs-container {
+  margin-left: 40px;
+  width: 100%;
+}
+.type-of-emp {
+  color: #ffffff;
+  font-size: 20px;
+}
+.type-of-emp-list-container {
+  list-style: none;
+  padding: 0;
+}
+.jobs-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.search-mobile-container {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  width: 100%;
+  height: 35px;
+}
+
+@media screen and (min-width: 992px) {
+  .search-mobile-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-container {
+    display: none;
+  }
+  .profile-filter-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .app-jobs {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .jobs-container {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app-home {
+    background-color: #000000;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .home-heading {
+    font-size: 20px;
+    width: 100%;
+  }
+  .home-page-description {
+    font-size: 16px;
+    width: 100%;
+  }
+  .find-jobs-btn {
+    height: 35px;
+    width: 100px;
+    font-size: 14px;
+  }
+}
