@@ -5,7 +5,6 @@ import Header from '../Header'
 import './index.css'
 
 const AppliedJob = ({formData, jobItemDetails}) => {
-  console.log(formData, jobItemDetails)
   return (
     <>
       <Header />
@@ -16,12 +15,9 @@ const AppliedJob = ({formData, jobItemDetails}) => {
           <p style={{color: '#ffffff'}}>Name: {formData.name}</p>
           <p style={{color: '#ffffff'}}>Email: {formData.email}</p>
           <p style={{color: '#ffffff'}}>
-            Cover Letter Note: {formData.coverLetter}
+            Resume or Cover Letter:{' '}
+            {formData.resume ? formData.resume.name : 'N/A'}
           </p>
-          {/* <p>
-        Resume or Cover Letter:{' '}
-        {formData && formData.resume ? formData.resume.name : 'N/A'}
-      </p> */}
         </div>
       </div>
     </>

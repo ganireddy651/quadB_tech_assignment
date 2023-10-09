@@ -11,6 +11,7 @@ const ApplicationForm = props => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [coverLetter, setCoverLetter] = useState('')
+  const [resume, setResume] = useState(null)
 
   const onSubmitHandler = e => {
     e.preventDefault()
@@ -21,6 +22,7 @@ const ApplicationForm = props => {
         name,
         email,
         coverLetter,
+        resume,
       }
 
       const {submitForm} = props
@@ -33,6 +35,7 @@ const ApplicationForm = props => {
       setName('')
       setEmail('')
       setCoverLetter('')
+      setResume(null)
     }
   }
   return (
@@ -82,7 +85,7 @@ const ApplicationForm = props => {
               value={coverLetter}
             />
           </div>
-          {/* <div className="name-container">
+          <div className="name-container">
             <label htmlFor="resume" className="application-label">
               Resume or Cover Letter
             </label>
@@ -92,9 +95,9 @@ const ApplicationForm = props => {
               id="resume"
               className="name-input"
               placeholder="Resume or Cover Letter"
-              onChange={e => e.target.files[0]}
+              onChange={e => setResume(e.target.files[0])}
             />
-          </div> */}
+          </div>
           <div className="submit-button-container">
             <button type="submit" className="submit-button">
               Submit
