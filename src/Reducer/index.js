@@ -1,5 +1,6 @@
 const initialState = {
   formData: null,
+  appliedJob: null,
 }
 
 const formReducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const formReducer = (state = initialState, action) => {
       return {
         ...state,
         formData: action.payload,
+      }
+    case 'APPLY':
+      return {
+        ...state,
+        appliedJob: action.payload,
       }
     default:
       return state

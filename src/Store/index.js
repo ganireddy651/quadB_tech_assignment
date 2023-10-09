@@ -2,12 +2,12 @@
 import {createStore, applyMiddleware} from 'redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import reducer from '../Reducer'
+import formReducer from '../Reducer'
 
 const middleWare = [thunk]
 
 const store = createStore(
-  reducer,
+  formReducer,
   composeWithDevTools(applyMiddleware(...middleWare)),
 )
 

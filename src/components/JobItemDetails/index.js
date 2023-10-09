@@ -1,9 +1,12 @@
+/* eslint-disable no-shadow */
 import {Component} from 'react'
+import {connect} from 'react-redux'
 import Cookies from 'js-cookie'
 import {AiFillStar} from 'react-icons/ai'
 import {MdLocationOn} from 'react-icons/md'
 import {BsFillBriefcaseFill} from 'react-icons/bs'
 import Loader from 'react-loader-spinner'
+import {appliedJobTitle} from '../../Action'
 import Skills from '../Skills'
 import Header from '../Header'
 import './index.css'
@@ -63,7 +66,11 @@ class JobItemDetails extends Component {
   }
 
   handlerOnApplyJob = () => {
-    const {history} = this.props
+    const {history, appliedJobTitle} = this.props
+    const {jobItemDetails} = this.state
+
+    appliedJobTitle(jobItemDetails.title)
+
     history.replace('/apply-job')
   }
 
@@ -135,4 +142,8 @@ class JobItemDetails extends Component {
   }
 }
 
-export default JobItemDetails
+const mapDispatchToProps = {
+  appliedJobTitle,
+}
+
+export default connect(null, mapDispatchToProps)(JobItemDetails)
