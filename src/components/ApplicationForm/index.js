@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-shadow */
 /* eslint-disable import/no-extraneous-dependencies */
 import {useState} from 'react'
@@ -13,23 +14,26 @@ const ApplicationForm = props => {
 
   const onSubmitHandler = e => {
     e.preventDefault()
+    if (name === '' || email === '' || coverLetter === '') {
+      alert('Enter name, email, cover letter')
+    } else {
+      const formData = {
+        name,
+        email,
+        coverLetter,
+      }
 
-    const formData = {
-      name,
-      email,
-      coverLetter,
+      const {submitForm} = props
+
+      submitForm(formData)
+
+      const {history} = props
+      history.replace('/applied')
+
+      setName('')
+      setEmail('')
+      setCoverLetter('')
     }
-
-    const {submitForm} = props
-
-    submitForm(formData)
-
-    const {history} = props
-    history.replace('/applied')
-
-    setName('')
-    setEmail('')
-    setCoverLetter('')
   }
   return (
     <>
