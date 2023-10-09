@@ -1,4 +1,4 @@
-In this project, let's build a **Jobby App** by applying the concepts we have learned till now.
+I have named the project **GET-HIRED App** 
 
 ### Refer to videos below:
 
@@ -338,10 +338,9 @@ Returns a response containing the job details
 
 - Render `Home` Route component when the path in URL matches `/`
 - Render `Login` Route component when the path in URL matches `/login`
-- Render `Jobs` Route component when the path in URL matches `/jobs`
 - Render `Job Item Details` Route component when the path in URL matches `/jobs/:id`
 - Render `Not Found` Route component when the path in URL matches `/not-found`
-- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js`
+- I have included the `BrowserRouter` in  `index.js`
 
 - User credentials
 
@@ -350,37 +349,6 @@ Returns a response containing the job details
    password: rahul@2021
 
   ```
-
-- Wrap the `Loader` component with an HTML container element and add the `data-testid` attribute value as **loader** to it
-
-  ```jsx
-  <div className="loader-container" data-testid="loader">
-    <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-  </div>
-  ```
-
-- **Jobs Route**
-
-  - The HTML button element with search icon should have the `data-testid` attribute value as **searchButton** to it
-
-  ```jsx
-  <button type="button" data-testid="searchButton">
-    <BsSearch className="search-icon" />
-  </button>
-  ```
-
-  - The profile image should have the alt as **profile**
-  - The company logo images in Jobs Route should have the alt as **company logo**
-
-- **Job Details Route**
-  - The company logo image should have the alt as **job details company logo**
-  - The life at company image should have the alt as **life at company**
-  - The skill images should have the alt as the value of the key `name` from each object in the **skills** list received from the job details response
-  - The company logo image in similar job item should have the alt as **similar job company logo**
-  </details>
-
-### Resources
-
 <details>
 <summary>Image URLs</summary>
 
@@ -418,15 +386,3 @@ Returns a response containing the job details
 <br/>
 </details>
 
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
